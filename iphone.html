@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple iPhones - MobileStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <!-- Top Navigation Bar (Same as index.html) -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Assts/logo/logo.png" alt="" width="50px">
+                <a href="index.html">MobileStore</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="samsung.html">Samsung Phones</a></li>
+                    <li><a href="iphone.html" class="active">iPhones</a></li>
+                    <li><a href="product.html">Deals/Offers</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+            <div class="nav-icons">
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <a href="#" class="login-btn">Login / Sign Up</a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Banner -->
+    <section class="category-banner">
+        <div class="container">
+            <h1>Apple iPhones</h1>
+            <p>Explore the latest iPhone lineup with cutting-edge technology</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="category-page">
+        <div class="container">
+            <div class="category-layout">
+                <!-- Filter Sidebar -->
+                <aside class="filter-sidebar">
+                    <div class="filter-section">
+                        <h3>Filters</h3>
+                        <button class="clear-filters">Clear All</button>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Price Range</h4>
+                        <div class="price-range">
+                            <input type="range" min="100" max="2000" value="2000" class="price-slider" id="priceRange">
+                            <div class="price-values">
+                                <span>$100</span>
+                                <span>$2000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Storage</h4>
+                        <ul class="filter-options">
+                            <li><input type="checkbox" id="storage-64"> <label for="storage-64">64GB</label></li>
+                            <li><input type="checkbox" id="storage-128"> <label for="storage-128">128GB</label></li>
+                            <li><input type="checkbox" id="storage-256"> <label for="storage-256">256GB</label></li>
+                            <li><input type="checkbox" id="storage-512"> <label for="storage-512">512GB</label></li>
+                            <li><input type="checkbox" id="storage-1tb"> <label for="storage-1tb">1TB</label></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Model</h4>
+                        <ul class="filter-options">
+                            <li><input type="checkbox" id="model-15"> <label for="model-15">iPhone 15 Series</label></li>
+                            <li><input type="checkbox" id="model-14"> <label for="model-14">iPhone 14 Series</label></li>
+                            <li><input type="checkbox" id="model-13"> <label for="model-13">iPhone 13 Series</label></li>
+                            <li><input type="checkbox" id="model-se"> <label for="model-se">iPhone SE</label></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Condition</h4>
+                        <ul class="filter-options">
+                            <li><input type="checkbox" id="condition-new"> <label for="condition-new">New</label></li>
+                            <li><input type="checkbox" id="condition-used"> <label for="condition-used">Used</label></li>
+                            <li><input type="checkbox" id="condition-refurb"> <label for="condition-refurb">Refurbished</label></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-section">
+                        <h4>Rating</h4>
+                        <ul class="filter-options rating-filter">
+                            <li><input type="checkbox" id="rating-5"> <label for="rating-5"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> & Up</label></li>
+                            <li><input type="checkbox" id="rating-4"> <label for="rating-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> & Up</label></li>
+                            <li><input type="checkbox" id="rating-3"> <label for="rating-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> & Up</label></li>
+                        </ul>
+                    </div>
+                </aside>
+                
+                <!-- Product Grid -->
+                <div class="product-grid-container">
+                    <div class="sort-options">
+                        <p>18 Products Found</p>
+                        <select id="sortBy">
+                            <option value="popular">Sort by: Popularity</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Customer Rating</option>
+                            <option value="newest">Newest First</option>
+                        </select>
+                    </div>
+                    
+                    <div class="product-grid">
+                        <!-- iPhone Product 1 -->
+                        <div class="product-card">
+                            <div class="product-badge">Best Seller</div>
+                            <img src="Assts/iphone/iphone 16 images.webp" alt="iPhone 15 Pro">
+                            <div class="product-info">
+                                <h3>iPhone 16 Pro</h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(42)</span>
+                                </div>
+                                <div class="price">$999 <span class="old-price">$1,099</span></div>
+                                <div class="product-actions">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <a href="product.html" class="view-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- iPhone Product 2 -->
+                        <div class="product-card">
+                            <div class="product-badge">New</div>
+                            <img src="Assts/iphone/iphone 14 images.jpeg" alt="iPhone 15 Pro Max">
+                            <div class="product-info">
+                                <h3>iPhone 14 Pro Max</h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(35)</span>
+                                </div>
+                                <div class="price">$1,199</div>
+                                <div class="product-actions">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <a href="product.html" class="view-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- iPhone Product 3 -->
+                        <div class="product-card">
+                            <img src="Assts/iphone/iphone x pro max images.jpeg" alt="iPhone 15 Plus">
+                            <div class="product-info">
+                                <h3>iPhone 15 Plus</h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(28)</span>
+                                </div>
+                                <div class="price">$899</div>
+                                <div class="product-actions">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <a href="product.html" class="view-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- iPhone Product 4 -->
+                        <div class="product-card">
+                            <img src="Assts/iphone/iphone 6 images.jpg" alt="iPhone 15">
+                            <div class="product-info">
+                                <h3>iPhone 6</h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(31)</span>
+                                </div>
+                                <div class="price">$799</div>
+                                <div class="product-actions">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <a href="product.html" class="view-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- iPhone Product 5 -->
+                        <div class="product-card">
+                            <div class="product-badge">Sale</div>
+                            <img src="Assts/iphone/iphone 14.jpg" alt="iPhone 14 Pro Max">
+                            <div class="product-info">
+                                <h3>iPhone 14</h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(47)</span>
+                                </div>
+                                <div class="price">$1,099 <span class="old-price">$1,199</span></div>
+                                <div class="product-actions">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <a href="product.html" class="view-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- iPhone Product 6 -->
+                        <div class="product-card">
+                            <img src="Assts/iphone/iphone 15 pro max.webp" alt="iPhone 14">
+                            <div class="product-info">
+                                <h3>iPhone 15 pro</h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(36)</span>
+                                </div>
+                                <div class="price">$699</div>
+                                <div class="product-actions">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <a href="product.html" class="view-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- iPhone Product 7 -->
+                        <div class="product-card">
+                            <div class="product-badge">Value</div>
+                            <img src="Assts/iphone/iphone 13.jpg" alt="iPhone 13">
+                            <div class="product-info">
+                                <h3>iPhone 13</h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(52)</span>
+                                </div>
+                                <div class="price">$599 <span class="old-price">$699</span></div>
+                                <div class="product-actions">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <a href="product.html" class="view-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- iPhone Product 8 -->
+                        <div class="product-card">
+                            <img src="Assts/iphone/se.jpg" alt="iPhone SE">
+                            <div class="product-info">
+                                <h3>iPhone SE (3rd Gen)</h3>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(24)</span>
+                                </div>
+                                <div class="price">$429</div>
+                                <div class="product-actions">
+                                    <button class="add-to-cart">Add to Cart</button>
+                                    <a href="product.html" class="view-details">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pagination">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Newsletter (Same as index.html) -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Get Latest Offers & Updates</h2>
+                <p>Subscribe to our newsletter and never miss a deal</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>MobileStore</h3>
+                    <p>Your one-stop shop for the latest smartphones and accessories at the best prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="samsung.html">Samsung Phones</a></li>
+                        <li><a href="iphone.html">iPhones</a></li>
+                        <li><a href="#">Deals & Offers</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Mobile St, Tech City</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> info@mobilestore.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MobileStore. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="script.js"></script>
+</html>
